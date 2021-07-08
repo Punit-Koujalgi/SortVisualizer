@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { initialTraceState, initialVisualState } from "../utilities/Constants";
+import "./Visualizer.css";
 import {
   resetVisualState,
   resetTraceState,
@@ -7,6 +8,9 @@ import {
 } from "../utilities/visualStates";
 import SortChart from "./SortChart";
 import VisualizerControls from "./VisualizerControls";
+import ProgressBar from "./Parts/ProgressBar";
+import ColorKey from "./ColorKey";
+import SortInfo from "./SortInfo";
 
 const Visualizer = (props) => {
   const [playbackSpeed, setPlaybackSpeed] = useState(1);
@@ -103,6 +107,12 @@ const Visualizer = (props) => {
     const playSpeed = Number(speed.split("x")[0]);
     setPlaybackSpeed(playSpeed);
   };
+  const repeat = () => {
+    document.getElementById("progress_active").style.width = "0%";
+    settimeoutIds(clearTimeoutIds(timeoutIds));
+    setVisualState(resetVisualState(props.array));
+    setTrace(resetTraceState(props.trace));
+  };
   return (
     <div className="SortVisualizer">
       <SortChart
@@ -114,7 +124,7 @@ const Visualizer = (props) => {
         groupD={visualState.groupD}
         sortedIndices={visualState.sortedIndices}
       />
-      {/* <div className="ProgressBar">
+      <div className="ProgressBarOut">
         <ProgressBar
           width={
             traceState.trace.length > 0
@@ -122,7 +132,7 @@ const Visualizer = (props) => {
               : 0
           }
         />
-      </div> */}
+      </div>
       <VisualizerControls
         traceState={traceState}
         onRun={run}
@@ -130,13 +140,13 @@ const Visualizer = (props) => {
         onPause={pause}
         onForward={stepForward}
         onBackward={stepBackward}
-        // onRepeat={}
+        onRepeat={repeat}
         onAdjustSpeed={adjustPlaybackSpeed}
         playing={timeoutIds.length > 0}
         playbackSpeed={playbackSpeed}
       />
-      {/* <ColorKey key={props.colorKey} />
-      <SortInfo info={props.desc} /> */}
+      <ColorKey {...props.colorKey} />
+      <SortInfo {...props.desc} />
     </div>
   );
 };

@@ -1,0 +1,17 @@
+.ProgressBar {
+  width: 0%;
+  height: 0.375rem;
+  border-radius: 4px;
+  overflow: hidden;
+  /* background-color: rgb(72, 72, 74); */
+  background-color: #ffc1e3;
+  transition: width 250ms linear;
+}
+
+/* .ProgressBar__Active {
+  width: 50%;
+  height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #ffc1e3;
+} */
