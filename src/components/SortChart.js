@@ -46,7 +46,7 @@ const SortChart = ({
   groupD,
   sortedIndices,
 }) => {
-  console.log(numbers);
+  //console.log(numbers);
   return (
     <div className="SortChart">
       {getListOfBars(

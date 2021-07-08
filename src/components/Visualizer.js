@@ -103,7 +103,7 @@ const Visualizer = (props) => {
     if (playing) continuation();
   }, [playbackSpeed]);
   const adjustPlaybackSpeed = (speed) => {
-    this.pause();
+    pause();
     const playSpeed = Number(speed.split("x")[0]);
     setPlaybackSpeed(playSpeed);
   };

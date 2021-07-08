@@ -34,3 +34,15 @@
   width: 2rem;
   margin: 0;
 }
+
+#playback {
+  background-color: rgb(58, 58, 60) !important;
+  color: rgb(209, 209, 214) !important;
+  border-color: rgb(58, 58, 60) !important;
+}
+
+li,
+ul {
+  text-align: center !important;
+  cursor: pointer;
+}

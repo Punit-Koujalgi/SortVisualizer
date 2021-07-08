@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   MdPlayArrow as Play,
   MdPause as Pause,
@@ -9,6 +10,11 @@ import Button from "./Parts/Button";
 import "./VisualizerControls.css";
 
 const VisualizerControls = (props) => {
+  useEffect(() => {
+    if (!props.playing) document.getElementById("playback").disabled = false;
+    else document.getElementById("playback").disabled = true;
+  }, [props.playing]);
+
   let playDisabled = false;
   if (
     (props.traceState.traceStep >= props.traceState.trace.length - 1 &&
@@ -25,6 +31,11 @@ const VisualizerControls = (props) => {
   const onRunHere = () => {
     if (props.traceState.traceStep === -1) props.onRun(props.traceState.trace);
     else props.onContinue();
+  };
+  const playblackHandler = (event) => {
+    const speed = event.target.innerHTML;
+    document.getElementById("playback").innerHTML = speed;
+    props.onAdjustSpeed(speed);
   };
   return (
     <div className="VisualizerControls">
@@ -65,6 +76,36 @@ const VisualizerControls = (props) => {
         noDropIcon
         className="VisualizerControls__SpeedButton"
       /> */}
+      <div className="dropdown">
+        <button
+          id="playback"
+          type="button"
+          className="btn shadow-none"
+          data-toggle="dropdown">
+          {props.playbackSpeed.toString() + "x"}
+        </button>
+        <ul className="dropdown-menu">
+          <li className="dropdown-item" onClick={playblackHandler}>
+            0.25x
+          </li>
+          <div className="dropdown-divider"></div>
+          <li className="dropdown-item" onClick={playblackHandler}>
+            0.5x
+          </li>
+          <div className="dropdown-divider"></div>
+          <li className="dropdown-item" onClick={playblackHandler}>
+            1x
+          </li>
+          <div className="dropdown-divider"></div>
+          <li className="dropdown-item" onClick={playblackHandler}>
+            2x
+          </li>
+          <div className="dropdown-divider"></div>
+          <li className="dropdown-item" onClick={playblackHandler}>
+            4x
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
