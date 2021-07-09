@@ -7,6 +7,7 @@ import {
 } from "./utilities/Constants";
 import { initialState } from "./utilities/Constants";
 import { generateRandomArray, createTrace } from "./utilities/ArrayFunctions";
+import Navbar from "./components/Navbar";
 import Visualizer from "./components/Visualizer";
 import "./App.css";
 
@@ -43,13 +44,13 @@ function App() {
 
   return (
     <div className="theme">
-      {/* <Navbar
+      <Navbar
         algo={algo}
         onAlgorithmChange={onAlgorithmChange}
         arraySize={arraySize}
         onArraySizeChange={onArraySizeChange}
         onRandomize={onRandomize}
-      /> */}
+      />
       <main className="body">
         <Visualizer
           array={array}
