@@ -20,13 +20,6 @@ An interactive React web application that provides real-time visualization of va
 ### Quick Sort Visualization
 ![Quick Sort Demo](VisualizeQuickSort.gif)
 
-## 🛠️ Technology Stack
-
-- **React** 17.0.2 - Frontend framework
-- **JavaScript (ES6+)** - Core programming language
-- **CSS3** - Styling and animations
-- **Bootstrap** 5.0.2 - UI components and layout
-- **React Icons** 4.2.0 - Icon library
 
 ## 🎮 Usage
 
