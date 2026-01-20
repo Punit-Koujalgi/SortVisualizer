@@ -1,70 +1,205 @@
-# Getting Started with Create React App
+# Sort Visualizer 🔄 - [Live Demo](https://punit-koujalgi.github.io/SortVisualizer/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An interactive React web application that provides real-time visualization of various sorting algorithms. This educational tool helps users understand how different sorting algorithms work by providing step-by-step visual representation with color-coded elements, performance metrics, and detailed algorithm descriptions.
 
-## Available Scripts
+![Sorting Visualizer Demo](VisualizeSort.gif)
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- **7 Sorting Algorithms**: Visualize bubble sort, selection sort, insertion sort, merge sort, quick sort, quicksort 3-way partitioning, and heap sort
+- **Interactive Controls**: Play, pause, adjust speed, and step through sorting animations
+- **Color-Coded Visualization**: Different colors represent various states (comparing, swapping, sorted, etc.)
+- **Performance Metrics**: View time and space complexity for each algorithm
+- **Customizable Array Size**: Adjust the number of elements to sort (from small to large datasets)
+- **Randomize Function**: Generate new random arrays to test algorithms
+- **Responsive Design**: Works seamlessly across different screen sizes
+- **Educational Content**: Detailed descriptions and complexity analysis for each algorithm
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🎯 Demo
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Quick Sort Visualization
+![Quick Sort Demo](VisualizeQuickSort.gif)
 
-### `npm test`
+## 🛠️ Technology Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React** 17.0.2 - Frontend framework
+- **JavaScript (ES6+)** - Core programming language
+- **CSS3** - Styling and animations
+- **Bootstrap** 5.0.2 - UI components and layout
+- **React Icons** 4.2.0 - Icon library
 
-### `npm run build`
+## 🎮 Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Select Algorithm**: Choose from the dropdown menu in the navigation bar
+2. **Adjust Array Size**: Use the slider to change the number of elements
+3. **Randomize**: Click the randomize button to generate a new array
+4. **Start Visualization**: Click the play button to begin the sorting animation
+5. **Control Playback**: Use play/pause and speed controls to manage the visualization
+6. **Learn**: Read the algorithm descriptions and complexity information
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🧮 Supported Algorithms
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 1. **Bubble Sort**
+- **Description**: A simple comparison-based algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they're in the wrong order
+- **Time Complexity**: 
+  - Best: O(n)
+  - Average: O(n²)
+  - Worst: O(n²)
+- **Space Complexity**: O(1)
+- **Visualization**: Shows comparisons in blue and swaps in red
 
-### `npm run eject`
+### 2. **Selection Sort**
+- **Description**: Divides the input into sorted and unsorted regions, repeatedly finding the minimum element from the unsorted region and placing it at the beginning
+- **Time Complexity**: 
+  - Best: O(n²)
+  - Average: O(n²)
+  - Worst: O(n²)
+- **Space Complexity**: O(1)
+- **Visualization**: Highlights the current minimum element and its final position
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 3. **Insertion Sort**
+- **Description**: Builds the final sorted array one element at a time, inserting each new element into its proper position among the previously sorted elements
+- **Time Complexity**: 
+  - Best: O(n)
+  - Average: O(n²)
+  - Worst: O(n²)
+- **Space Complexity**: O(1)
+- **Visualization**: Shows the sorted portion growing from left to right
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 4. **Merge Sort**
+- **Description**: A divide-and-conquer algorithm that recursively divides the array into halves, sorts them, and then merges them back together
+- **Time Complexity**: 
+  - Best: O(n log n)
+  - Average: O(n log n)
+  - Worst: O(n log n)
+- **Space Complexity**: O(n)
+- **Visualization**: Shows the divide and merge process with color-coded subarrays
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 5. **Quick Sort**
+- **Description**: Uses a pivot element to partition the array, recursively sorting elements smaller and larger than the pivot
+- **Time Complexity**: 
+  - Best: O(n log n)
+  - Average: O(n log n)
+  - Worst: O(n²)
+- **Space Complexity**: O(log n)
+- **Visualization**: Highlights pivot element and partitioning process
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 6. **Quick Sort 3-Way Partitioning**
+- **Description**: An optimized version of quicksort that handles arrays with many duplicate elements by partitioning into three groups: less than, equal to, and greater than the pivot
+- **Time Complexity**: 
+  - Best: O(n)
+  - Average: O(n log n)
+  - Worst: O(n²)
+- **Space Complexity**: O(log n)
+- **Visualization**: Shows three-way partitioning with different colors for each region
 
-## Learn More
+### 7. **Heap Sort**
+- **Description**: Uses a binary heap data structure to sort elements, first building a max heap and then repeatedly extracting the maximum element
+- **Time Complexity**: 
+  - Best: O(n log n)
+  - Average: O(n log n)
+  - Worst: O(n log n)
+- **Space Complexity**: O(1)
+- **Visualization**: Shows heap construction and extraction process
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🚀 Getting Started
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Prerequisites
+- Node.js (v12 or higher)
+- npm or yarn package manager
 
-### Code Splitting
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Punit-Koujalgi/SortVisualizer.git
+   cd sort_visualizer
+   ```
 
-### Analyzing the Bundle Size
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. **Start the development server**
+   ```bash
+   npm start
+   ```
 
-### Making a Progressive Web App
+4. **Open your browser and navigate to** `http://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Building for Production
 
-### Advanced Configuration
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This creates an optimized production build in the `build/` directory.
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The project is configured for GitHub Pages deployment:
 
-### `npm run build` fails to minify
+```bash
+npm run deploy
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📁 Project Structure
+
+```
+src/
+├── components/           # React components
+│   ├── Navbar.js        # Navigation and algorithm selection
+│   ├── Visualizer.js    # Main visualization container
+│   ├── SortChart.js     # Chart rendering component
+│   ├── ColorKey.js      # Color legend component
+│   ├── SortInfo.js      # Algorithm information display
+│   └── Parts/           # Reusable UI components
+├── algorithms/          # Sorting algorithm implementations
+│   ├── BubbleSort.js
+│   ├── SelectionSort.js
+│   ├── InsertionSort.js
+│   ├── MergeSort.js
+│   ├── QuickSort.js
+│   ├── QuickSort3.js
+│   └── HeapSort.js
+├── utilities/           # Helper functions and constants
+│   ├── Constants.js     # Algorithm mappings and initial state
+│   ├── ArrayFunctions.js # Array generation and manipulation
+│   └── visualStates.js  # Visualization state management
+└── App.js              # Main application component
+```
+
+## 🎨 Visualization Features
+
+- **Color Coding**: Each algorithm uses specific colors to represent different operations
+  - Blue: Elements being compared
+  - Red: Elements being swapped
+  - Green: Sorted elements
+  - Yellow: Current element being processed
+  - Purple: Pivot elements (in quicksort)
+
+- **Speed Control**: Adjust animation speed from slow to fast
+- **Step-by-Step Mode**: Step through the algorithm one operation at a time
+- **Progress Tracking**: Visual progress bar showing sorting completion
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+### Development Guidelines
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🔗 Links
+
+- **Live Demo**: [SortVisualizer](https://punit-koujalgi.github.io/SortVisualizer/)
+- **GitHub Repository**: [Source Code](https://github.com/Punit-Koujalgi/SortVisualizer)
+

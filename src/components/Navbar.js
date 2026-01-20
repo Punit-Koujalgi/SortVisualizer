@@ -42,7 +42,7 @@ const Navbar = (props) => {
             </li>
             <div className="dropdown-divider"></div>
             <li className="dropdown-item" onClick={algoHandle}>
-              Quick(random)
+              Quick Sort 3
             </li>
             <div className="dropdown-divider"></div>
             <li className="dropdown-item" onClick={algoHandle}>
