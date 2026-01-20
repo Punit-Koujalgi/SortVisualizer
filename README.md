@@ -31,7 +31,7 @@ An interactive React web application that provides real-time visualization of va
 ## 🎮 Usage
 
 1. **Select Algorithm**: Choose from the dropdown menu in the navigation bar
-2. **Adjust Array Size**: Use the slider to change the number of elements
+2. **Adjust Array Size**: Choose the number of elements
 3. **Randomize**: Click the randomize button to generate a new array
 4. **Start Visualization**: Click the play button to begin the sorting animation
 5. **Control Playback**: Use play/pause and speed controls to manage the visualization
